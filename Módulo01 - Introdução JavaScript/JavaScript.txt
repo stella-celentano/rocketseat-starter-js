@@ -1,0 +1,11 @@
+uma variável declarada como 'var' é visível somento no escopo que ela estiver, se estiver dentro de uma function, será visível apenas dentro dela.
+
+== verifica se os valores são iguais, independente do tipo.
+
+=== verifica se os valores são iguais e se são do mesmo tipo.
+
+condição ternária, é quando só tem 1 verificação dentro do if (if e else), é feito na mesma linha, utilizando sinal de ? e :, que fazem as condições simples. A ? que é o resultado satisfatório da condição e o : que é o valor que não é satisfatório.
+
+utilizar o for sempre que soubermos o valor do intervalo que vamos precisar e o while quando não sabemos quantas vezes será executado.
+
+um intervalo é alguma função que executa várias vezes dentro de um intervalo

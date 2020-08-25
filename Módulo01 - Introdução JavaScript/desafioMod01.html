@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Módulo01</title>
+</head>
+
+<body>
+    <script>
+
+        //exerc 1
+        var endereco = {
+            rua: 'Rua dos pinheiros',
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+        function retornaEndereco() {
+            return 'O usuário mora em ' + endereco.cidade + ' / ' + endereco.uf + ', no bairro ' + endereco.bairro + ', na rua "' + endereco.rua + '" com nº ' + endereco.numero + '.';
+        }
+        var retorno = retornaEndereco();
+        console.log(retorno);
+
+        // exerc 2
+        function pares(x, y) {
+            for (i = x; i <= y; i++) {
+                if (i % 2 === 0) {
+                    console.log(i);
+                }
+            }
+        }
+        pares(32, 321);
+
+        // exerc 3
+        function temHabilidade(skills) {
+            if (skills.indexOf('Javascript') !== -1) {
+                return console.log(true);
+            } else {
+                return console.log(false);
+            }
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        temHabilidade(skills);
+
+        // exerc 4
+        function experiencia(anos) {
+            if (anos < 1) {
+                return console.log('Iniciante');
+            } else if (anos < 3) {
+                return console.log('Intermediário');
+            } else if (anos < 6) {
+                return console.log('Avançado');
+            } else if (anos >= 7) {
+                return console.log('Jedi Master');
+            } else {
+                return console.log('Não atende a nenhuma faixa');
+            }
+        }
+        var anosEstudo = 7;
+        experiencia(anosEstudo);
+
+        // exerc 5
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        function exibeHabilidades(usuarios) {
+            for (const user of usuarios) {
+                const { nome, habilidades } = user;
+                console.log(`O ${nome} possui as habilidades: ${habilidades.join(", ")}`); //join vai imprimir todos os valores do array usando a ',' como dafault, mas pode passar o que quiser
+            }
+        }
+        exibeHabilidades(usuarios);
+    </script>
+</body>
+
+</html>
