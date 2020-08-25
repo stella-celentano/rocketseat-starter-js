@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScrip</title>
+</head>
+<body>
+
+    <div id="app">
+    <!-- AULA 1 - eventos inline
+        <button onclick="mostaAlerta()">Me pressione</button>
+                o onclick captura o evento de quando clicar no elemento
+        <button onmouseover="mostaAlerta()">Me pressione</button>
+                o onmouseover captura o evento de quando passa o mouse em cima do elemento
+         <input onkeypress="mostaAlerta()" />
+                onkeypress captura o evento de apertar e soltar uma tecla -->
+        
+        <!-- <input type="text" name="nome" id="nome" class="nome" />
+        <button class="botao">Adicionar</button>
+        <input id="nome" /> -->
+
+        <!-- <div class="box"></div> -->
+
+    </div>
+
+    <script>
+    // AULA 1
+        // function mostaAlerta() {
+        //     alert('Botão foi clicado!');
+        // }
+        
+    //AULA 2 - como referenciar elementos através do JS (trabalhando com a DOM)
+        // var inputElement = document.getElementById('nome');
+        
+        // var inputElement = document.getElementsByTagName('input')[0];
+            // esse método sempre retorna um vetor pois não tem como garantir que terá apenas
+            // 1 elemento input, e quando queremos pegar apenas o primeiro, passa o [0] pegando a primeira posição
+        
+        // var inputElement = document.getElementsByClassName('nome')[0];
+            // também irá retornar um vetor pois as classes não são únicas no HTML como os id
+        
+        // var inputElement = document.querySelector('input[name=nome]'); 
+            // permite que possa percorrer a DOM buscando o elemento específico, dizendo onde o elemento se encontra
+            // quando usa os colchete [], está referenciando uma propriedade do elemento
+            // também pode passar assim: querySelecto('div#app input'), dizendo o 'caminho' que o elemento que eu quero está
+            // se passar so 'input' por exemplo, ele sempre irá retornar apenas UM elemento, mesmo que tenha mais de um input 
+        // var inputElement = document.querySelectorAll('input'); 
+            // para retornar todos os elementos, usamos o querySelectAll
+        // console.log(inputElement);
+
+            // os querySelector serão utilizados para recuperar elementos e valores em tela
+            // agora manipulamos os elementos da DOM direto pelo JS
+        // var inpuElement = document.querySelector('input[name=nome]');
+        // var btnElement = document.querySelector('button.botao');
+        // btnElement.onclick = function() {
+        //     var text = inpuElement.value;
+                
+        //     alert('Botão clicado');
+        //     alert(text);
+        // }
+    
+    // AULA 3 - lidando com elementos
+        // var linkElement = document.createElement('a');
+
+        // linkElement.setAttribute('href', 'http://rocketseat.com.br');
+        // linkElement.setAttribute('title', 'Site da Rocketseat');
+
+
+        // var textElement = document.createTextNode('Acessar site da rocketseat');
+        //     adicionando o textElement como um filho do linkElement
+        // linkElement.appendChild(textElement);
+
+        // var containerElement = document.querySelector('#app');
+        // containerElement.appendChild(linkElement);
+        //     removendo um elemento da exibição
+        // var inputElement = document.querySelector('#nome');
+        // containerElement.removeChild(inputElement);
+
+    // AULA 4 - alterando estilos
+        // var boxElement = document.querySelector('.box');
+
+        // boxElement.style.width = 100;
+        // boxElement.style.height = 100;
+        // boxElement.style.backgroundColor = '#f00';
+    </script>
+    
+</body>
+</html>

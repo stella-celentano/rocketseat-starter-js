@@ -1,0 +1,1 @@
+a DOM é a árvore de elementos dentro do HTML, é composta por todos os elementos visualmente dispostos em tela. Consegue manipular os elementos como salvar eventos, como quando o usuário clicou em um botão por exemplo.

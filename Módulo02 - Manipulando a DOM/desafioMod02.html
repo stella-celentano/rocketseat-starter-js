@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Módulo 02</title>
+</head>
+
+<body>
+    <div></div>
+
+    <button id="novoQuadrado" onclick="adicionarQuadrado()">
+        Criar um quadrado vermelho
+    </button>
+
+    <div id="espaco"></div>
+
+    <ul id="listaNomes"></ul>
+
+    <input type="text" id="nome" />
+    <button onclick="adicionarNovoItem()">Adicionar</button>
+
+    <script>
+        var btnElement = document.getElementById("novoQuadrado");
+        var espacoElement = document.getElementById("espaco");
+
+       function adicionarQuadrado() {
+            var divElement = document.createElement("div");
+            divElement.style.width = "100px";
+            divElement.style.height = "100px";
+            divElement.style.backgroundColor = "#F00";
+            divElement.style.marginTop = "10px";
+
+            divElement.onmouseover = function() {
+                divElement.style.backgroundColor = getRandomColor();
+            };
+
+            espacoElement.appendChild(divElement);
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            };
+        };
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var listElement = document.querySelector("ul");
+
+        var inputElement = document.getElementById("nome");
+
+        for (nome of nomes) {
+            // nesse tipo de for, cada vez que houver uma iteração, um valor da 
+            // iteravel nomes (objeto que contém os valores, nesse caso o nosso array de nomes) 
+            // será atribuito à variável nome
+            adicionarNaLista(nome);
+        }
+
+        function adicionarNaLista(nome) {
+            // essa função cria uma linha com o texto que estiver no parâmetro recebido e mostra na tela
+            var linhaElement = document.createElement("li");
+            var textoElement = document.createTextNode(nome);
+
+            linhaElement.appendChild(textoElement);
+            listElement.appendChild(linhaElement);
+        }
+
+        function adicionarNovoItem() {
+            if (inputElement.value) {
+                adicionarNaLista(inputElement.value);
+            } else {
+                alert("Preencha um valor!");
+            }
+
+            inputElement.value = "";
+        }
+    </script>
+</body>
+
+</html>
